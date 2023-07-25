@@ -1,0 +1,12 @@
+import java.util.Scanner
+
+fun main() {
+    val scanner = Scanner(System.in)
+    print("Bir harf girin: ")
+    val harf = scanner.next()[0].toLowerCase()
+
+    val sesliHarfler = arrayOf('a', 'e', 'ı', 'i', 'o', 'ö', 'u', 'ü')
+
+    val sonuc = if (harf in sesliHarfler) "Girdiğiniz harf bir sesli harftir." else "Girdiğiniz harf bir sessiz harftir."
+    println(sonuc)
+}
