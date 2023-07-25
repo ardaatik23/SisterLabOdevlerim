@@ -1,0 +1,10 @@
+import java.util.Scanner
+
+fun main() {
+    val scanner = Scanner(System.in)
+    print("Sınav notunu girin: ")
+    val not = scanner.nextInt()
+
+    val sonuc = if (not >= 70) "Geçtiniz" else "Kaldınız"
+    println(sonuc)
+}
