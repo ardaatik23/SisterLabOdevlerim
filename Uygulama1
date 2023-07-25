@@ -1,0 +1,32 @@
+fun main() {
+    val scanner = Scanner(System.`in`)
+    val GirilecekDegerler = Random.nextInt(1, 101)
+    val maxGiris = 5
+    var toplamGirisSayisi = maxGiris
+
+    println("Sayı Tahmin Oyununa Hoş Geldiniz!")
+    println("1 ile 100 arasında bir sayıyı tahmin etmeye çalışın.")
+    println("Toplam tahmin hakkınız: $maxGiris")
+
+    while (toplamGirisSayisi > 0) {
+        print("Tahmininizi girin: ")
+        val sayi1 = scanner.nextInt()
+
+        if (sayi1 == GirilecekDegerler) {
+            println("Tebrikler, doğru tahmin ettiniz! Sayı: $GirilecekDegerler")
+            break
+        } else if (sayi1 < GirilecekDegerler) {
+            println("Daha büyük bir sayı girin.")
+        } else {
+            println("Daha küçük bir sayı girin.")
+        }
+
+        toplamGirisSayisi--
+        if (toplamGirisSayisi > 0) {
+            println("Kalan tahmin hakkınız: $toplamGirisSayisi")
+        } else {
+            println("Tüm tahmin haklarınızı kullandınız. Doğru sayı: $GirilecekDegerler")
+        }
+    }
+    println("Oyun bitti!")
+}
