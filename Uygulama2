@@ -1,0 +1,16 @@
+fun faktoriyel(sayi: Int): Int {
+    return when {
+        sayi < 0 -> throw IllegalArgumentException("Negatif sayıların faktöriyeli tanımsızdır.")
+        sayi <= 1 -> 1
+        else -> sayi * faktoriyel(sayi - 1)
+    }
+}
+
+fun main() {
+    val scanner = Scanner(System.in)
+    print("Bir sayı girin: ")
+    val sayi = scanner.nextInt()
+
+    val sonuc = faktoriyel(sayi)
+    println("$sayi! = $sonuc")
+}
