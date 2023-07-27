@@ -1,0 +1,22 @@
+open class Oyuncu(val ad: String, val numara: Int) {
+
+    open fun oyna() {
+        println("Oyuncu $ad oyuna girdi!")
+    }
+}
+
+class Futbolcu(ad: String, numara: Int, val pozisyon: String) : Oyuncu(ad, numara) {
+
+    override fun oyna() {
+        super.oyna()
+        println("Futbolcu $ad, $pozisyon oynadı.")
+    }
+}
+
+class Basketbolcu(ad: String, numara: Int, val boy: Int) : Oyuncu(ad, numara) {
+
+    override fun oyna() {
+        super.oyna()
+        println("Basketbolcu $ad, $boy cm boyunda.")
+    }
+}
